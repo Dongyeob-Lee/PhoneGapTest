@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<head> 
+	<title>About</title> 
+
+   	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+   	<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+   	<link rel="stylesheet" href="css/jquery.mobile.1.0.1.transitions.css" />
+    <link rel="stylesheet" href="ios_inspired/styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.1.0.min.js"></script>
+	<script>
+		function btnClick(){
+            var output=document.getElementById("text1").value;
+            navigator.notification.alert(output+'사장님 사랑합니다.',alertDismissed,'Notification','Done');
+		}
+        function alertDismissed() {
+    // do something
+            document.getElementById(text).innerText = "";
+        }
+	</script>
+</head> 
+<body> 
+    <div align="center">
+        <header data-role="header">
+        <h2>PhoneGap Test</h2>
+        </header>
+    </div>
+    <div align="left">
+        <h2 style="margin-left: 15px;">이름 입력</h2>
+        <input id="text1" type="text">
+        <input type="button" value="입력" onclick="btnClick(); return false;">
+    </div>
+    <div align="center">
+    	<img src="images/upi.png" style="margin-top:50px;">
+    </div>
+
+</body>
+</html>
